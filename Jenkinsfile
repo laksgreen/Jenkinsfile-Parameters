@@ -9,11 +9,11 @@ pipeline {
              steps {
                  build job : 'job1',	parameters:
                  [
-			           [
-			               $class: 'StringParameterValue', 
-			               name: 'action',
-			               value: "DESTROY"
-			               ],
+		   [
+			$class: 'StringParameterValue', 
+			name: 'action',
+			 value: "DESTROY"
+			],
                        [ $class: 'StringParameterValue', name: 'env', value: "1231" ]
                  ]  
              }
@@ -22,8 +22,8 @@ pipeline {
              steps {
                  build job : 'job2',	parameters:
                  [
-			        [$class: 'StringParameterValue', name: 'action', value: "CREATED" ],
-                    [ $class: 'StringParameterValue', name: 'env', value: "1232" ]
+			[$class: 'StringParameterValue', name: 'action', value: "CREATED" ],
+                    	[ $class: 'StringParameterValue', name: 'env', value: "1232" ]
                  ]  
              }
          }
